@@ -1,21 +1,29 @@
 language: ruby
 rvm:
-  - 1.9.3
-  - 2.0
-  - 2.1
-  - 2.2.2
-  - ruby-head
-  - jruby-9.0.3.0
+- 1.9.3
+- 2.0
+- 2.1
+- 2.2.2
+- ruby-head
+- jruby-9.0.3.0
 matrix:
   allow_failures:
-    - rvm: 1.9.3
-    - rvm: ruby-head
-    - rvm: jruby-9.0.3.0
+  - rvm: 1.9.3
+  - rvm: ruby-head
+  - rvm: jruby-9.0.3.0
   fast_finish: true
 before_install:
-  - gem install bundler -v 1.11.2
+- gem install bundler -v 1.11.2
 script:
-  - bundle exec rake spec
+- bundle exec rake spec
 addons:
-    code_climate:
-        repo_token: 65f5f4b85c4e69dc40d03921a885735b7f6c05e0f6c8a3f24ed03807d4d2c7cd
+  code_climate:
+    repo_token: 65f5f4b85c4e69dc40d03921a885735b7f6c05e0f6c8a3f24ed03807d4d2c7cd
+deploy:
+  provider: rubygems
+  api_key:
+    secure: QL9iikzEZSV5CvLBPM/u6gx4ZvifzmrmisfLVKl7XeVIrRWyLnGFMvzqOz88qzeMJlfDfKtZfLDJRDvithoHc0zj1R8hB/dIGJrpSUADlHo05s/vr54yL9051ZM8j5v9H2IUin8nMpqdpqQzQ7cOa0pwPbIy9qJxYq5ZciNxQMz4zFrU3iHpBIpaCH5aRr4fESgOR8adO2nDN3ye6VN2YXrBmX4/NnxHnnSYAQ4qa87oPQIpCAlIqSwRhp2DwPdT1xCusV4pO7hpWJJCl4voK1+TQAbdLXNMIw3FPeyRNNuTIs5rjH8amLBuQJ5yp2aKDiLhB9lfW1jv3MdmhoME/p3ptoaUH4H/7+K/UsnUaurIKfn4kyNHUgAnCc1CollkmFDLhAJTC9kIcRuvm3pQXR9Y1rj2KboPf7CVrOveurh1A7C+QUGmctQlMJpvXnre/kpLOPiPT8gqacb2lDMSDDn1OlUBcYQLxL7lYhGHvAKWsiARDlBm6Nz8JVfrA93G55ZAPSR49WnSBxtSlw6Gt7qUf8sTy6a+/JBbEhRnIwcFKYZbl76lXNnVeV7rIkOqBFs3qZFAsAj/WRtXX0EMzTGJwulmOekIuZvoU9dG1nafKwfMWlGWJfK9+yTRzK05/keWwLEHVv54uSDO9ti/m+kkE/aqsgX0TMBlI8de97E=
+  gem: uber-sdk
+  on:
+    tags: true
+    repo: chrisenytc/uber-sdk
