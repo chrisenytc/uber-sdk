@@ -2,3 +2,7 @@ rubocop:
   enabled: true
   config:
     config: .rubocop.yml
+duplication:
+    enabled: true
+    exclude_fingerprints:
+    - bf8f1f256605f0d32c60b8cb6aaebed7
