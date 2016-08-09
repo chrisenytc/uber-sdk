@@ -3,7 +3,7 @@ rvm:
 - 1.9.3
 - 2.0
 - 2.1
-- 2.2.2
+- 2.2
 - ruby-head
 - jruby-9.0.3.0
 matrix:
@@ -24,6 +24,8 @@ deploy:
   api_key:
     secure: QL9iikzEZSV5CvLBPM/u6gx4ZvifzmrmisfLVKl7XeVIrRWyLnGFMvzqOz88qzeMJlfDfKtZfLDJRDvithoHc0zj1R8hB/dIGJrpSUADlHo05s/vr54yL9051ZM8j5v9H2IUin8nMpqdpqQzQ7cOa0pwPbIy9qJxYq5ZciNxQMz4zFrU3iHpBIpaCH5aRr4fESgOR8adO2nDN3ye6VN2YXrBmX4/NnxHnnSYAQ4qa87oPQIpCAlIqSwRhp2DwPdT1xCusV4pO7hpWJJCl4voK1+TQAbdLXNMIw3FPeyRNNuTIs5rjH8amLBuQJ5yp2aKDiLhB9lfW1jv3MdmhoME/p3ptoaUH4H/7+K/UsnUaurIKfn4kyNHUgAnCc1CollkmFDLhAJTC9kIcRuvm3pQXR9Y1rj2KboPf7CVrOveurh1A7C+QUGmctQlMJpvXnre/kpLOPiPT8gqacb2lDMSDDn1OlUBcYQLxL7lYhGHvAKWsiARDlBm6Nz8JVfrA93G55ZAPSR49WnSBxtSlw6Gt7qUf8sTy6a+/JBbEhRnIwcFKYZbl76lXNnVeV7rIkOqBFs3qZFAsAj/WRtXX0EMzTGJwulmOekIuZvoU9dG1nafKwfMWlGWJfK9+yTRzK05/keWwLEHVv54uSDO9ti/m+kkE/aqsgX0TMBlI8de97E=
   gem: uber-sdk
+  skip_cleanup: true
   on:
     tags: true
     repo: chrisenytc/uber-sdk
+    rvm: 2.2
