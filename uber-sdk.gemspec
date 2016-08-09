@@ -5,13 +5,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "uber/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "uber-ruby"
+  spec.name          = "uber-sdk"
   spec.version       = Uber::Version
   spec.authors       = ["Dingding Ye", "Christopher EnyTC"]
   spec.email         = ["yedingding@gmail.com", "chris@enytc.com"]
   spec.summary       = "Uber SDK for Ruby."
-  spec.description   = "A Ruby interface to the Uber API."
-  spec.homepage      = "https://github.com/sishen/uber-ruby"
+  spec.description   = "A Ruby SDK for the Uber API."
+  spec.homepage      = "https://github.com/chrisenytc/uber-sdk"
   spec.license       = "MIT"
 
   spec.files = %w(LICENSE.txt README.md Rakefile uber-ruby.gemspec)
