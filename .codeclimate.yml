@@ -1,8 +1,16 @@
-rubocop:
-  enabled: true
-  config:
-    config: .rubocop.yml
-duplication:
+---
+engines:
+  duplication:
     enabled: true
-    exclude_fingerprints:
-    - bf8f1f256605f0d32c60b8cb6aaebed7
+    config:
+      languages:
+      - ruby
+  fixme:
+    enabled: true
+  rubocop:
+    enabled: true
+ratings:
+  paths:
+  - "**.rb"
+exclude_paths:
+- spec/
