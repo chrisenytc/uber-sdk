@@ -1,17 +1,17 @@
 # Uber SDK for Ruby
 
-> A Ruby interface to the Uber API.
+> A Ruby SDK for the Uber API
 
 ## Status
 
-# [![Build Status](https://img.shields.io/travis/sishen/uber-ruby/master.svg?maxAge=2592000g)](http://travis-ci.org/sishen/uber-ruby) [![Maintenance](https://img.shields.io/maintenance/yes/2016.svg?maxAge=2592000)]() [![Gem](https://img.shields.io/gem/dt/uber-ruby.svg?maxAge=2592000)](http://rubygems.org/gems/uber-ruby) [![Code Climate](https://codeclimate.com/github/sishen/uber-ruby/badges/gpa.svg)](https://codeclimate.com/github/sishen/uber-ruby) [![Gem](https://img.shields.io/gem/v/uber-ruby.svg?maxAge=2592000)]() [![License](https://img.shields.io/github/license/sishen/uber-ruby.svg?maxAge=2592000)](https://github.com/sishen/uber-ruby/blob/master/LICENSE.txt) [![GitHub stars](https://img.shields.io/github/stars/sishen/uber-ruby.svg?style=social&label=Star&maxAge=2592000)](https://github.com/sishen/uber-ruby) [![GitHub watchers](https://img.shields.io/github/watchers/sishen/uber-ruby.svg?style=social&label=Watch&maxAge=2592000)](https://github.com/sishen/uber-ruby)
+# [![Build Status](https://img.shields.io/travis/chrisenytc/uber-sdk/master.svg?maxAge=2592000g)](http://travis-ci.org/chrisenytc/uber-sdk) [![Maintenance](https://img.shields.io/maintenance/yes/2016.svg?maxAge=2592000)]() [![Gem](https://img.shields.io/gem/dt/uber-ruby.svg?maxAge=2592000)](http://rubygems.org/gems/uber-ruby) [![Code Climate](https://codeclimate.com/github/chrisenytc/uber-sdk/badges/gpa.svg)](https://codeclimate.com/github/chrisenytc/uber-sdk) [![Gem](https://img.shields.io/gem/v/uber-ruby.svg?maxAge=2592000)]() [![License](https://img.shields.io/github/license/chrisenytc/uber-sdk.svg?maxAge=2592000)](https://github.com/chrisenytc/uber-sdk/blob/master/LICENSE.txt) [![GitHub stars](https://img.shields.io/github/stars/chrisenytc/uber-sdk.svg?style=social&label=Star&maxAge=2592000)](https://github.com/chrisenytc/uber-sdk) [![GitHub watchers](https://img.shields.io/github/watchers/chrisenytc/uber-sdk.svg?style=social&label=Watch&maxAge=2592000)](https://github.com/chrisenytc/uber-sdk)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'uber-ruby', require: 'uber'
+gem "uber-sdk", require: "uber"
 ```
 
 And then execute:
@@ -23,7 +23,7 @@ $ bundle
 Or install it yourself as:
 
 ```bash
-$ gem install uber-ruby
+$ gem install uber-sdk
 ```
 
 ## Configuration
@@ -176,14 +176,9 @@ end
 client.trip_cancel 'request_id'
 ```
 
-## Contributors
-
-* [Arun Thampi](https://github.com/arunthampi)
-* [Christopher EnyTC](https://github.com/chrisenytc)
-
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/uber-ruby/fork )
+1. Fork it ( http://github.com/chrisenytc/uber-sdk/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
