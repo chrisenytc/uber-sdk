@@ -209,7 +209,7 @@ module Uber
     end
 
     def only_show_last_four_chars(text)
-      %(#{"*"*(text.size-4)}#{text[-4..-1]})
+      %(#{'*' * (text.size - 4)}#{text[-4..-1]})
     end
   end
 end
