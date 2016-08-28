@@ -26,6 +26,23 @@ module Uber
       validate_credential_type!
     end
 
+    # Text representation of the client, masking server token and client secret
+    #
+    # @return [String]
+    def inspect
+      inspected = super
+
+      if @server_token
+        inspected = inspected.sub! @server_token, only_show_last_four_chars(@server_token)
+      end
+
+      if @client_secret
+        inspected = inspected.sub! @client_secret, only_show_last_four_chars(@client_secret)
+      end
+
+      inspected
+    end
+
     def bearer_token=(token)
       @bearer_token = Token.new(
         access_token: token,
@@ -189,6 +206,10 @@ module Uber
 
     def server_auth_header
       "Token #{@server_token}"
+    end
+
+    def only_show_last_four_chars(text)
+      %(#{'*' * (text.size - 4)}#{text[-4..-1]})
     end
   end
 end
